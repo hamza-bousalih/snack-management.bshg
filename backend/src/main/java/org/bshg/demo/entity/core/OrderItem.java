@@ -4,13 +4,13 @@ import java.time.*;
 import java.util.*;
 import java.math.BigDecimal;
 @Entity
-@Table(name="order_item")
+@jakarta.persistence.Table(name="order_item")
 public class OrderItem {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long id;
 private int quantity;
-@ManyToOne(fetch = FetchType.LAZY)
+@ManyToOne(fetch = FetchType.LAZY) @JoinColumn(name = "snack_order")
 private Order order;
 @ManyToOne(fetch = FetchType.LAZY)
 private MenuItem menuItem;

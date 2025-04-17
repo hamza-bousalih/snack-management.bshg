@@ -5,7 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.math.BigDecimal;
 @Entity
-@Table(name="order")
+@jakarta.persistence.Table(name="snack_order")
 public class Order {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,7 +15,7 @@ private OrderStatusEnum status;
 private LocalDateTime createdAt;
 @OneToOne()
 private User creator;
-@ManyToOne(fetch = FetchType.LAZY)
+@ManyToOne(fetch = FetchType.LAZY)  @JoinColumn(name = "snack_table")
 private Table table;
 @OneToMany(mappedBy = "order")
 private List<OrderItem> orderItem;

@@ -5,7 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.math.BigDecimal;
 @Entity
-@Table(name="table")
+@jakarta.persistence.Table(name="snack_table")
 public class Table {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)

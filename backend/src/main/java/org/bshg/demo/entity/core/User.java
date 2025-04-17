@@ -5,7 +5,7 @@ import java.time.*;
 import java.util.*;
 import java.math.BigDecimal;
 @Entity
-@Table(name="user")
+@jakarta.persistence.Table(name="snack_user")
 public class User extends AppUser {
 private String fullname;
 public User() {

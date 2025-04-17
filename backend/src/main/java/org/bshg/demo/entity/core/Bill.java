@@ -1,10 +1,11 @@
 package org.bshg.demo.entity.core;
+
 import jakarta.persistence.*;
-import java.time.*;
-import java.util.*;
-import java.math.BigDecimal;
+
+import java.time.LocalDateTime;
+
 @Entity
-@Table(name="bill")
+@jakarta.persistence.Table(name="bill")
 public class Bill {
 @Id
 @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -14,7 +15,7 @@ private float discount;
 private float tax;
 private float finalAmmount;
 private LocalDateTime createdAt;
-@OneToOne()
+@OneToOne() @JoinColumn(name = "snack_order")
 private Order order;
 @OneToOne()
 private User issuer;

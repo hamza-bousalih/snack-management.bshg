@@ -1,3 +1,5 @@
+name: snack-management
+
 services:
   postgres:
     container_name: snack-postgres

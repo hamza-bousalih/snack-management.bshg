@@ -55,6 +55,7 @@ const App = () => {
 
     if (!isColorModeSet()) setColorMode(storedTheme)
 
+    console.log(window.location.href)
     authValidation(window.location.href)
   }, [])
 
